@@ -21,7 +21,9 @@ class Application(tk.Frame):
         self.text_form.pack(side="left")
 
     def tweet(self):
-        print("Tweet !")
+        text = self.text_form.get('1.0', tk.END)
+        print(text)
+        self.text_form.delete('1.0', tk.END)
 
 root = tk.Tk()
 app = Application(root)
