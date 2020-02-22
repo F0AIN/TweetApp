@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter.scrolledtext import ScrolledText
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -13,7 +14,7 @@ class Application(tk.Frame):
         self.tweet_button["command"] = self.tweet
         self.tweet_button.pack(side="right")
 
-        self.text_form = tk.Text(self,
+        self.text_form = ScrolledText(self,
                                  height = 5,
                                  width = 20,
                                  font = ('メイリオ', '11'))
